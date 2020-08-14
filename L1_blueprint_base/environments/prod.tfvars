@@ -1,21 +1,18 @@
 tags = {
-  "classification"    = "pbmm"
-  "contact"           = "<some email>; <some email>; etc"
-  "costcentre"        = "566811"
-  "env"               = "dev"
-  "owner"             = "<some email>; <some email>; etc"
-  "cloudusageprofile" = "3"
-  "branch"            = "<branch name>"
+  "contact"           = "s153300@student.dtu.dk"
+  "env"               = "prod"
+  "owner"             = "s153300@student.dtu.dk"
+  "branch"            = "Student"
 }
 
-env     = "ScSc"
-group   = "CIO"
-project = "ESLZ_vnext"
+env     = "<IaCP>"
+group   = "<DevOps>"
+project = "<Infrastructure as Code Project>"
 
-location = "canadacentral"
+location = "westeurope"
 
 deployOptionalFeatures = {
-  ddos_protection_plan       = false
+  ddos_protection_plan       = true
   defaultRoute               = false
   recovery_services_vault    = false
   security_center            = false
@@ -63,12 +60,18 @@ domain = {
 
 L1_RBAC = {
   ownerNames = [
+    "some@aad.user.email",
+    "some@aad.user.email2"
   ]
 
   contributorNames = [
+    "some@aad.user.email",
+    "some@aad.user.email2"
   ]
 
   readerNames = [
+    "some@aad.user.email",
+    "some@aad.user.email2"
   ]
 }
 
@@ -92,4 +95,3 @@ vmConfigs = {
     priority       = "Spot"
   }
 }
-

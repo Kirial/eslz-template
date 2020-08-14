@@ -9,4 +9,4 @@ project = "ESLZ_vnext"
 
 convention = "passthrough"
 enable_collaboration = true
-location = "canadacentral"
+location = "westeurope"

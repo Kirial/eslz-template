@@ -1,16 +1,13 @@
 tags = {
-  "classification"    = "pbmm"
-  "contact"           = "<some email>; <some email>; etc"
-  "costcentre"        = "566811"
-  "env"               = "dev"
-  "owner"             = "<some email>; <some email>; etc"
-  "cloudusageprofile" = "3"
-  "branch"            = "<branch name>"
+  "contact"           = "s153300@student.dtu.dk"
+  "env"               = "prod"
+  "owner"             = "s153300@student.dtu.dk"
+  "branch"            = "Student"
 }
 
-env     = "<4 chard env>"
-group   = "<group name, keep it short>"
-project = "<project name, keep it short>"
+env     = "<IaCP>"
+group   = "<DevOps>"
+project = "<Infrastructure as Code Project>"
 
 location = "canadacentral"
 
