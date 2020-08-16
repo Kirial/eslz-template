@@ -17,7 +17,7 @@ env:
   L0_BLUEPRINT: 'L0_blueprint_launchpad'
   L1_BLUEPRINT: 'L1_blueprint_base'
   L2_BLUEPRINT: 'L2_blueprint_project'
-  ENV_NAME: 'cicd'
+  ENV_NAME: 'dev'
 
 jobs:
   launchpad_deploy:

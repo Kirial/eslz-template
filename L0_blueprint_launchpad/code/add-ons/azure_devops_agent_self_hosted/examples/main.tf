@@ -73,14 +73,14 @@ resource "azurerm_subnet" "level0" {
   name                 = "level0"
   resource_group_name  = azurerm_resource_group.rg_vnet.name
   virtual_network_name = azurerm_virtual_network.vnet.name
-  address_prefix       = "10.0.0.0/26"
+  address_prefixes       = "10.0.0.0/26"
 }
 
 resource "azurerm_subnet" "level1" {
   name                 = "level1"
   resource_group_name  = azurerm_resource_group.rg_vnet.name
   virtual_network_name = azurerm_virtual_network.vnet.name
-  address_prefix       = "10.0.0.64/26"
+  address_prefixes       = "10.0.0.64/26"
 }
 
 resource "azurecaf_naming_convention" "la" {
