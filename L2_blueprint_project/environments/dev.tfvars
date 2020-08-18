@@ -7,7 +7,7 @@ tags = {
 
 env     = "<IaCP>"
 group   = "<DevOps>"
-project = "<Iac-Project>"
+project = "<Iac>"
 
 location = "westeurope"
 
