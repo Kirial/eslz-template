@@ -5,7 +5,7 @@
 
 env     = "<IaCP>"
 group   = "<DevOps>"
-project = "<dev-Infrastructure as Code Project>"
+project = "<dev-IaC-Project>"
 
 convention = "passthrough"
 enable_collaboration = true

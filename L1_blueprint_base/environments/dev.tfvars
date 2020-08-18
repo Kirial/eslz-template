@@ -7,12 +7,12 @@ tags = {
 
 env     = "<IaCP>"
 group   = "<DevOps>"
-project = "<Infrastructure as Code Project>"
+project = "<dev-IaC-Project>"
 
 location = "westeurope"
 
 deployOptionalFeatures = {
-  ddos_protection_plan       = true
+  ddos_protection_plan       = false
   defaultRoute               = false
   recovery_services_vault    = false
   security_center            = false
