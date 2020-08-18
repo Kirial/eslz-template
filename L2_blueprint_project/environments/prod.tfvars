@@ -11,42 +11,8 @@ project = "<Infrastructure as Code Project>"
 
 location = "westeurope"
 
-deployOptionalFeatures = {
-  ddos_protection_plan       = true
-  defaultRoute               = false
-  recovery_services_vault    = false
-  security_center            = false
-  sentinel                   = false
-  update_management          = false
-  deny_publicip_policy       = false
-  diagnostics_policy         = false
-  flow_logs_policy           = false
-  jumpServer                 = false
-}
-
-## Optional Features variables ##
-
-optionalFeaturesConfig = {
-  recovery_services_vault = {
-    sku                 = "Standard" # Sets the vault's SKU. Possible values include: Standard, RS0
-    soft_delete_enabled = true       # Is soft delete enable for this Vault?
-  }
-  security_center = {
-    email = "some@test.com"
-    phone = "123-456-7890"
-  }
-}
-
-network = {
-  vnet = ["10.10.10.0/24"]
-  subnets = {
-    PAZ = ["10.10.10.0/27"]
-    OZ  = ["10.10.10.32/27"]
-    RZ  = ["10.10.10.64/27"]
-    MAZ = ["10.10.10.96/27"]
-  }
-}
-Landing-Zone-Next-Hop = "10.10.20.10"
+Landing-Zone-Next-Hop = "10.10.20.20"
+RDS-Gateways           = ["100.96.185.4", "100.96.185.5"]
 
 domain = {
   public = {
@@ -58,15 +24,15 @@ domain = {
   }
 }
 
-L1_RBAC = {
-  ownerNames = [
+L2_RBAC = {
+  contributorNames = [
     "some@aad.user.email",
     "some@aad.user.email2"
   ]
 
-  contributorNames = [
-    "some@aad.user.email",
-    "some@aad.user.email2"
+  contributorEnterpriseID = [
+    "bb294f5d-fece-4d3a-a187-7f98cb64e478", # Some user SP
+    "2000c7f5-0f8d-4a45-a65d-d70dc3edcac3"  # Some user2 SP
   ]
 
   readerNames = [
@@ -76,7 +42,7 @@ L1_RBAC = {
 }
 
 vmConfigs = {
-  
+  /*
   # Template for Linux server variables
 
   Server-Name = {
@@ -87,11 +53,16 @@ vmConfigs = {
     vm_size              = string # Required. Example: "Standard_D2s_v3"
     priority             = string # Optional. Default is "Regular". possible values are "Regular" or "Spot"
   }
-  
+  */
 
-  SWJ-01 = {
-    admin_password = "tmp-Canada123!"
+  SRV-linux-mgmt = {
+    deploy         = false
+    admin_password = "tmp-e4d5rtc!"
     vm_size        = "Standard_D2s_v3"
     priority       = "Spot"
   }
+}
+
+L1_terraform_remote_state_config = {
+    key = "L1_blueprint_base_prod.tfstate" # <------------ Don't forget to set the env name!!!
 }

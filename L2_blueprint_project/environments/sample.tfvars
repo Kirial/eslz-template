@@ -9,7 +9,7 @@ env     = "<IaCP>"
 group   = "<DevOps>"
 project = "<Infrastructure as Code Project>"
 
-location = "canadacentral"
+location = "westeurope"
 
 Landing-Zone-Next-Hop = "10.10.20.20"
 RDS-Gateways           = ["100.96.185.4", "100.96.185.5"]
